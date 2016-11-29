@@ -251,5 +251,16 @@
             $window.location.href = 'index.html';
         });
     };
+    $scope.userRegister = function () {
+        if (!$scope.loginForm.$valid) {
+            return;
+        }
+        CurrentUser.register($scope.loginData)
+        .success(function (data) {
+            CurrentUser.setId(data.userId);
+            $window.location.href = 'login.html';
+        });
+    };
+    
     //CurrentUser.check();
 });

@@ -39,8 +39,14 @@
                                 <div class="form-group">
                                     <input  key-bind="{ enter: 'userLogin()' }"  class="form-control" placeholder="Password" ng-model="loginData.password" name="password" type="password" value="admin">
                                 </div>
+                                
+                                  <div class="btn-toolbar">
                                 <!-- Change this to a button or input when using this as a form -->
-                                <a ng-click="userLogin()" class="btn btn-lg btn-success btn-block">Login</a>
+                                 <a ng-click="userRegister()" class="btn btn-lg btn-error ">Register</a>
+                                <a ng-click="userLogin()" class="btn btn-lg btn-success pull-right">Login</a>
+                               
+                          		</div>
+                          	
                             </fieldset>
                         </form>
                     </div>
